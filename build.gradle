@@ -1,0 +1,57 @@
+plugins {
+
+
+
+
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Apache POI for reading and writing Excel files
+    implementation 'org.apache.poi:poi:5.2.3'
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'
+
+    // JSch for SFTP operations
+    implementation 'com.jcraft:jsch:0.1.55'
+    implementation 'commons-net:commons-net:3.8.0'
+
+    // Log4j2 for logging
+    implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+    implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.20.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    implementation 'io.vertx:vertx-core:4.4.0'
+
+    // Vert.x Web (Optional: For web applications)
+    implementation 'io.vertx:vertx-web:4.4.0'
+
+    // Vert.x Auth JWT (Optional: For JWT authentication)
+    implementation 'io.vertx:vertx-auth-jwt:4.4.0'
+
+    // Vert.x Web Client (Optional: For HTTP client requests)
+    implementation 'io.vertx:vertx-web-client:4.4.0'
+
+    // Vert.x Config (Optional: For configuration management)
+    implementation 'io.vertx:vertx-config:4.4.0'
+
+    // Logging (Optional: For logging)
+    implementation 'io.vertx:vertx-micrometer-metrics:4.4.0'
+
+
+    // JUnit 5 for testing
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
